@@ -1,0 +1,9 @@
+设为主页 = Set as Homepage
+加入收藏 = Add to Fav
+首页 = Home
+关于我们 = About Us
+产品 = Product
+新闻 = News
+工程案例 = Case
+公司证书 = Certificate
+在线留言 = Feedback

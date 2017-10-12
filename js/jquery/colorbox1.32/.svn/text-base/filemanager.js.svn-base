@@ -1,0 +1,102 @@
+/*
+*author:qj
+*date: 2010.07.29
+*/
+
+function fileManger(){
+	var url = 'file_manger/filemanger.php';
+	var data;
+
+	var elementsNames = '';
+	var multi = true;
+	var elements = '';
+	var title = '相册';
+	var singleImg = 'singleImg';
+	var colorboxs;
+
+	this.init = function (memberId, elementsName){
+		if(!elementsName){
+			alert("参数错误！");
+			return false;
+		}
+		elementsNames = elementsName;
+		testsetst = elementsNames;
+		alert(arguments[2]);
+		elements = arguments[2] ? arguments[2] : elements;	
+		multi = arguments[3] == false ? arguments[3] : multi;
+		title = arguments[4] ? arguments[4] : title;
+
+		if(multi == false){
+			singleImg = arguments[5] ? arguments[5] : singleImg;
+		}
+
+		window.document.write("<a class='" + elementsNames + "' href='" + url + "?memberId=" + memberId +
+							  "' onclick='filemanagers.setParams(\"" + elementsName + "\",\"" + elements +
+							  "\"," + multi + ",\"" + title + "\",\"" + singleImg + "\")'>" + title + "</a>");
+		
+		$("." + elementsNames).colorbox({
+			width:"85%", height:"80%", iframe:true,
+			onOpen:function(){ },
+			onLoad:function(){ },
+			onComplete:function(){ },
+			onCleanup:function(){ },
+			onClosed:function(){ }
+		});
+		colorboxs = $("." + elementsNames);
+	}
+	
+	this.closeIfram = function (){
+		colorboxs.colorbox.close();
+	}
+	
+	this.setParams = function(){
+		elementsNames = arguments[0];
+		elements = arguments[1];
+		multi = arguments[2];
+		title = arguments[3];
+
+		if(multi == false){
+			singleImg = arguments[4];
+		}
+	}
+	
+	this.isMulti = function(){
+		return multi;
+	}
+	
+	this.getData = function(datas){
+		data = datas;
+	}
+	
+	this.getHtml = function(){
+		var htmls = '';
+
+		if(multi == true){
+			if(data){
+				for(key in data){
+					htmls += '<img src="' + data[key] + '" />';
+				}
+				if(elements == ''){
+					tinyMCE.execCommand('mceInsertContent', false, htmls);
+					alert(htmls);
+				} else {
+					tinyMCE.execInstanceCommand(elements, 'mceInsertContent', false, htmls);
+					alert(elements);
+				}			
+			}
+		} else {
+			if(data){
+				if(elements == ''){
+					alert("elements设置错误！");
+				} else {
+					$("." + singleImg).html('<img src="' + data[0] + '" width="80" height="80" /><input type="hidden" name="' + elements + '" value="' + data[0] + '"');
+					//window.document.write('<img src="' + data[0] + '" width="80" height="80" />');
+					//window.document.write('<input type="text" name="' + elements + '" value="' + data[0] + '"');
+				}
+			}
+		}
+	}
+
+}
+
+var filemanagers = new fileManger();

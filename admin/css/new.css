@@ -1,0 +1,35 @@
+/* CSS Document */
+body{ padding:0; margin:0; 
+	background:#E4E1DB; 
+	font-size:12px; 
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:140%;}
+
+/* top */
+#top{ height:50px; background:#2B216D url(../images/top_bg.gif) no-repeat left; overflow:hidden;}
+#top h1{ line-height:50px; font-size:20px; margin:0; padding:0 0 0 20px;  font-weight:normal; font-family:"黑体"; color:#fff;}
+#top h2{ line-height:34px; text-align:center; font-size:12px; font-weight:bold; color:#fff; padding:0; margin:0; }
+#top .left{ width:300px; height:50px; text-align:center;}
+#top .right{ margin:8px 8px 0 0; width:207px; height:34px; background:url(../images/time.gif); }
+
+#vbox{ padding-left:50px; height:29px; background:url(../images/viewbg.gif) repeat-x; line-height:29px; overflow:hidden;}
+.button img{ margin:3px 0 -3px 10px;}
+
+/* area */
+#area .left{ margin:10px; padding-top:32px; width:191px; background:url(../images/area_left_top.gif) no-repeat top; overflow:hidden;}
+#area .left .text{ padding:10px; width:171px; background:url(../images/area_left.gif) bottom;}
+#area .left .text ul li{ border-bottom:1px solid #EFECE7; border-top:1px solid #D0CFCD;}
+#area .left .text ul li a{ display:block; padding-left:40px; height:30px; line-height:30px;  color:#595763; background:url(../images/a.gif) no-repeat 15px 8px; text-decoration:none;}
+#area .left .text ul li a:hover{ background:#89806B url(../images/ahover.gif) no-repeat 15px 8px; color:#fff;}
+
+#area .right{ float:left; width:760px; background:#f5f2ed; margin-top:10px; padding:4px 0; }
+#area .right .ttl{ height:30x; overflow:hidden;}
+#area .right .ttl h4{ position:relative; margin-bottom:-1px; width:136px; line-height:30px; text-align:center; background:url(../images/ttl.gif) no-repeat;}
+#area .right .text{ padding:10px; height:500px; border:1px solid #D5D1C8; background:#F4F2EC}
+#area .right .text .tips{ padding:10px 10px 10px 100px; height:40px; line-height:150%; border:1px solid #C0BBB2; background:#E9E6DE url(../images/tips.gif) no-repeat 20px 0;}
+.font14{ font-size:14px; font-weight:bold;}
+
+/* footer */
+#footer{ margin-top:8px; padding-top:10px; height:22px; background:url(../images/footerbg.gif) repeat-x; overflow:hidden;}
+#footer .left{ padding-left:10px; line-height:22px; color:#fff; }
+#footer .right{ padding-right:10px; font-size:10px; line-height:22px; color:#6D698B;}

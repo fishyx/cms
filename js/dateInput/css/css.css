@@ -1,0 +1,21 @@
+a img{ border:0;}
+
+#dateInputPanel{ 
+	width:160px; text-align:center; border:1px solid #ccc; font-size:14px; background:#fff;
+	position:absolute; top:-200px; left:-300px; z-index:1001; }
+#dateInputPanel table{ border-collapse:collapse; width:100%; }
+#dateInputPanel .month_year{ background:#ddd; }
+#dateInputPanel .month_year td{ padding:4px 0; }
+#dateInputPanel .weekdays td{ padding-top:4px; }
+#dateInputPanel a{ text-decoration:none; }
+
+#CalendarDays a{ text-decoration:none; color:#006699; }
+#CalendarDays a.sel{ text-decoration:underline; color:#f00; }
+#CalendarDays td{ border:1px solid #eee; }
+#CalendarClose{ text-align:right; padding:4px; }
+
+.dateInputWrap a{ 
+	background:url(calendar.jpg) no-repeat; padding:0 4px; 
+	margin:2px 0 0 2px; text-decoration:none;}
+#CnextMonth, #CnextYear{ background:url(next.gif) no-repeat 100% 50%; }
+#CpreMonth, #CpreYear{ background:url(prev.gif) no-repeat 0 50%; }
